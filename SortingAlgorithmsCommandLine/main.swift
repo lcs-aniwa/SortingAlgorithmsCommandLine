@@ -24,35 +24,28 @@ print("Press any key to generate the unsorted list.", terminator: "")
 let input = readLine()
 
 // Make an empty array / list
-var numbers : [Int] = []
+var unsorted: [Int] = []
 
 // Populate the array
 for _ in 1...10 {
-    numbers.append( random(between: 1, and: 50) )
+    unsorted.append( random(between: 1, and: 50) )
 }
 
 // Show the user the contents of the array
 print("-----")
 print("The contents of the unsorted list:")
-for i in 0...numbers.count - 1 {
-    print("Index \(i), value: \(numbers[i])")
+for i in 0...unsorted.count - 1 {
+    print("Index \(i), value: \(unsorted[i])")
 }
 print("-----")
 
 // ----------- Write code to sort the array here -----------
 print("Now sorting the array...")
 // Invoke (use) the function above
-random(between: 1, and: 13)
 
-// Make a unsorted list
-var unsorted : [Int] = []
+// Make a sorted list
 var sorted : [Int] = []
 
-// Fill the list with values
-for _ in 1...13 {
-    unsorted.append ( random(between: 1, and: 50) )
-    
-}
 // keep reapiting untill there is not values in the unsorted
 
 while unsorted.count > 0 {
@@ -72,20 +65,16 @@ while unsorted.count > 0 {
         }
     }
     
-    
-    sorted
-    
     //Remove the last number from unsorted list
     unsorted.remove(at: unsorted.count - 1)
-    
-    unsorted
+
 }
 
 // ----------- Final part of the program, show the sorted list -----------
 print("-----")
 print("The contents of the sorted list:")
-for i in 0...numbers.count - 1 {
-    print("Index \(i), value: \(numbers[i])")
+for i in 0...sorted.count - 1 {
+    print("Index \(i), value: \(sorted[i])")
 }
 print("-----")
 
